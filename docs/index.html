@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TI-CREATE</title>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#e3e6ec;color:#1c2029;font:16px/1.5 "Avenir Next","Helvetica Neue",system-ui,sans-serif;padding:24px}
+main{max-width:560px}h1{font-size:2.4rem;line-height:1;margin:0 0 8px;font-weight:800;letter-spacing:-.03em}
+p{color:#5d6575}.btn{display:inline-block;margin:8px 10px 8px 0;padding:14px 22px;border-radius:12px;background:#2457d6;color:#fff;font-weight:700;text-decoration:none}
+.btn:hover{background:#1b43a8}.btn.alt{background:#262a33}.btn:focus-visible{outline:3px solid #8fb0ff;outline-offset:2px}
+</style></head>
+<body><main>
+<h1>TI-CREATE</h1>
+<p>Convert pictures and video for your TI-84 CE: TI-CREATE images and video, plus HD Picture Viewer tiles and custom convimg jobs.</p>
+<p>The converters need a real computer to run, so open it in a free GitHub Codespace (nothing to install), or download it and double-click <b>run.command</b> on a Mac.</p>
+<a class="btn" id="cs" href="#">Open in Codespaces</a><a class="btn alt" id="dl" href="#">Download for Mac</a>
+<p id="note"></p>
+</main>
+<script>
+// Works on <owner>.github.io/<repo>/ without any editing.
+var m=location.hostname.match(/^(.+)\.github\.io$/), r=location.pathname.split('/')[1];
+if(m&&r){var repo=m[1]+'/'+r;
+  document.getElementById('cs').href='https://codespaces.new/'+repo+'?quickstart=1';
+  document.getElementById('dl').href='https://github.com/'+repo+'/archive/refs/heads/main.zip';
+}else{document.getElementById('note').textContent='Publish this folder with GitHub Pages and the buttons will link to your repository automatically.';}
+</script></body></html>
